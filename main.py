@@ -229,13 +229,35 @@ def GetAcadOrgReport(term, acadorg, plan10):
     pyautogui.click(429, 21)
     time.sleep(6)
 
+def startInstagram():
+
+    # webbrowser.open("https://www.google.com")
+    webbrowser.open("https://www.instagram.com/ualbanybiology/")
+    time.sleep(5)
+
+def clearInstagram():
+
+    pyautogui.click(949,677)
+    time.sleep(4)
+    pyautogui.click(1605, 193)
+    time.sleep(4)
+    pyautogui.click(956, 466)
+    time.sleep(4)
+    pyautogui.click(969, 619)
+    time.sleep(4)
+
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
     # downloadmilestonereports()
-    downloadcoursebyacadorgreports()
+
+    # Disabled to do the Instagram clearing thing
+    # downloadcoursebyacadorgreports()
+
+    for x in range(20):
+        clearInstagram()
 
     # # Get name of file to be renamed
     # oldfilenamepattern = "UADW_CRSE_BY_ACAD_ORG"
